@@ -11,6 +11,7 @@
 		916212F9276E3AA6008D5A13 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 916212F8276E3AA6008D5A13 /* ContentView.swift */; };
 		916212FB276E3AA7008D5A13 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916212FA276E3AA7008D5A13 /* Assets.xcassets */; };
 		916212FE276E3AA7008D5A13 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 916212FD276E3AA7008D5A13 /* Preview Assets.xcassets */; };
+		91621306276E3B45008D5A13 /* AXEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91621305276E3B45008D5A13 /* AXEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		916212FA276E3AA7008D5A13 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		916212FD276E3AA7008D5A13 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		916212FF276E3AA7008D5A13 /* AXBugsWithCatalystApps.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AXBugsWithCatalystApps.entitlements; sourceTree = "<group>"; };
+		91621305276E3B45008D5A13 /* AXEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AXEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 		916212F5276E3AA6008D5A13 /* AXBugsWithCatalystApps */ = {
 			isa = PBXGroup;
 			children = (
+				91621305276E3B45008D5A13 /* AXEngine.swift */,
 				916212F6276E3AA6008D5A13 /* AXBugsWithCatalystAppsApp.swift */,
 				916212F8276E3AA6008D5A13 /* ContentView.swift */,
 				916212FA276E3AA7008D5A13 /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 			files = (
 				916212F9276E3AA6008D5A13 /* ContentView.swift in Sources */,
 				916212F7276E3AA6008D5A13 /* AXBugsWithCatalystAppsApp.swift in Sources */,
+				91621306276E3B45008D5A13 /* AXEngine.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
