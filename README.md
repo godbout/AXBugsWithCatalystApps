@@ -1,4 +1,4 @@
-Uploading AXBugsWithCatalystApps.mp4…
+https://user-images.githubusercontent.com/121373/146649497-e70d434e-a9b8-4712-a677-3a74e750b9fc.mp4
 
 1. launch the app
 2. add the app to Accessibility after the prompt
