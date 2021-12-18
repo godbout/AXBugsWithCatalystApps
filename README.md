@@ -1,4 +1,4 @@
-![yes](https://raw.githubusercontent.com/godbout/AXBugsWithCatalystApps/master/assets/AXBugsWithCatalystApps.gif "hehe")
+![yes](https://raw.githubusercontent.com/godbout/AXBugsWithCatalystApps/master/assets/AXBugsWithCatalystApps.mp4 "hehe")
 
 1. launch the app
 2. add the app to Accessibility after the prompt
