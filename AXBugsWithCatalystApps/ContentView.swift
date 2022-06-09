@@ -56,6 +56,32 @@ struct ContentView: View {
                 
                 print(lineRange)
             }
+            
+            Button("write \"hehe\" somewhere at the beginning of field") {
+                let options: NSDictionary = [kAXTrustedCheckOptionPrompt.takeRetainedValue() as NSString: true]
+                _ = AXIsProcessTrustedWithOptions(options)
+                
+                sleep(4)
+                
+                let axSystemWideElement = AXUIElementCreateSystemWide()
+                
+                var axFocusedElement: AnyObject?
+                guard AXUIElementCopyAttributeValue(axSystemWideElement, kAXFocusedUIElementAttribute as CFString, &axFocusedElement) == .success else {
+                    print("can't get system wide element")
+                    
+                    return
+                }
+                
+                let accessibilityTextElement = AccessibilityTextElement(
+                    role: .textArea,
+                    caretLocation: 2,
+                    selectedLength: 3,
+                    selectedText: "hehe",
+                    length: 10
+                )
+                
+                _ = axEngine.toAXFocusedElement(from: accessibilityTextElement, visibleCharacterLocation: 0)
+            }
         }
         .frame(width: 300, height: 300, alignment: .center)
     }

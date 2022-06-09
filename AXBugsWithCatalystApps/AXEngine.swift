@@ -35,6 +35,16 @@ public protocol AccessibilityTextElementProtocol {
     
 }
 
+public struct AccessibilityTextElement: AccessibilityTextElementProtocol {
+    
+    public var role: AXElementRole
+    public var caretLocation: Int
+    public var selectedLength: Int
+    public var selectedText: String?
+    public var length: Int
+
+}
+
 
 public protocol AXEngineProtocol {
     
@@ -61,8 +71,7 @@ public struct AXEngine: AXEngineProtocol {
         let axSystemWideElement = AXUIElementCreateSystemWide()
         
         var axFocusedElement: AnyObject?
-        let error = AXUIElementCopyAttributeValue(axSystemWideElement, kAXFocusedUIElementAttribute as CFString, &axFocusedElement)
-        
+        guard AXUIElementCopyAttributeValue(axSystemWideElement, kAXFocusedUIElementAttribute as CFString, &axFocusedElement) == .success else { return nil }
         
         return axFocusedElement as! AXUIElement?
     }
@@ -230,6 +239,7 @@ public struct AXEngine: AXEngineProtocol {
         
         if let selectedText = accessibilityElement.selectedText {
             guard AXUIElementSetAttributeValue(axFocusedElement, kAXSelectedTextAttribute as CFString, selectedText as CFTypeRef) == .success else { return false }
+            print("success")
         }
        
         return true
